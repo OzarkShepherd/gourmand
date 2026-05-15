@@ -1,7 +1,7 @@
 app-id: io.github.GourmandRecipeManager.Gourmand
 runtime: org.gnome.Platform
 # https://release.gnome.org/calendar/
-runtime-version: '50'
+runtime-version: '49'
 sdk: org.gnome.Sdk
 command: gourmand
 
