@@ -149,14 +149,14 @@ class NutritionInfoIndex:
             },
         )
 
-    def isearchCB(self, *args):
+    def isearch(self, *args):
         if self.searchAsYouTypeToggle.get_active():
             self.doSearch()
 
-    def searchCB(self, *args):
+    def search(self, *args):
         self.doSearch()
 
-    def search_as_you_typeCB(self, *args):
+    def search_as_you_type(self, *args):
         if self.searchAsYouTypeToggle.get_active():
             self.searchButton.hide()
         else:
