@@ -115,7 +115,7 @@ class NutritionUSDAIndex:
         self.toggle_saut()
         # search
         self.usdaSearchEntry.connect("changed", self.search_type_cb)
-        self.usdaFindButton.connect("clicked", self.search_cb)
+        self.usdaFindButton.connect("clicked", self.search)
         self.usdaSearchAsYouTypeToggle.connect("toggled", self.toggle_saut)
         cb.set_model_from_list(self.foodGroupComboBox, [self.ALL_GROUPS] + self.rd.get_unique_values("foodgroup", self.rd.nutrition_table))
         cb.cb_set_active_text(self.foodGroupComboBox, self.ALL_GROUPS)
@@ -203,11 +203,11 @@ class NutritionUSDAIndex:
         else:
             self.usdaFindButton.show()
 
-    def search_type_cb(self, *args):
+    def search_type(self, *args):
         if self.usdaSearchAsYouTypeToggle.get_active():
-            self.search_cb()
+            self.search()
 
-    def search_cb(self, *args):
+    def search(self, *args):
         if self.__override_search__:
             return
         GObject.idle_add(self.search)
