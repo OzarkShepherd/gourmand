@@ -149,7 +149,7 @@ class RecIndex:
                 "categorySearch": lambda *args: self.set_search_by("category"),
                 "cuisineSearch": lambda *args: self.set_search_by("cuisine"),
                 "search": self.search,
-                "searchBoxActivatedCB": self.search_entry_activate_cb,
+                "searchBoxActivated": self.search_entry_activate,
                 "rlistReset": self.reset_search,
                 "rlistLimit": self.limit_search,
                 "search_as_you_type_toggle": self.search_typing_toggle_callback,
@@ -250,7 +250,7 @@ class RecIndex:
         self.rectree_conf.apply_visibility()
         self.rectree.connect("row-activated", self.rec_tree_select_rec)
         self.rectree.connect("key-press-event", self.tree_keypress_cb)
-        self.rectree.get_selection().connect("changed", self.selection_changedCB)
+        self.rectree.get_selection().connect("changed", self.selection_changed)
         self.rectree.set_property("rules-hint", True)  # stripes!
         self.rectree.expand_all()
         self.rectree.show()
