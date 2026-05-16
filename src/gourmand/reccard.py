@@ -993,6 +993,27 @@ class RecEditor(WidgetSaver.WidgetPrefs, plugin_loader.Pluggable):
             self.rg.redo_search()
         return True
 
+    def search_as_you_type(self, *args):
+        """Search-as-you-type handler for nutrition druid (USDA + general search)."""
+        # TODO: Implement proper druid-specific search logic or delegate to RecIndex
+        # For now, this prevents the AttributeError
+        pass
+
+    def search_as_you_type_toggle(self, *args):
+        """Toggle for search-as-you-type in nutrition druid."""
+        pass
+
+    def search(self, *args):
+        """Main search button handler in nutrition druid.
+        May delegate to RecIndex.search if context allows."""
+        # Warning: RecIndex.search expects recipe-index widgets.
+        # You may need to check widget context or make a druid-specific version.
+        pass
+
+    def filter_changed(self, *args):
+        """Filter changed handler (used by food group + nutrition filters)."""
+        pass
+
     def preferences_cb(self, *args):
         """Show our preference dialog for the recipe card."""
         self.rg.prefsGui.show_dialog(page=self.rg.prefsGui.CARD_PAGE)
