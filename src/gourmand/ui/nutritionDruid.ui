@@ -305,7 +305,7 @@
                             </child>
                             <child>
                               <object class="GtkButton" id="usdaFindButton">
-                                <signal handler="search" name="clicked"/>
+                                <signal handler="searchCB" name="clicked"/>
                                 <property name="label">gtk-find</property>
                                 <property name="use_stock">True</property>
                                 <property name="relief">GTK_RELIEF_NORMAL</property>
@@ -321,7 +321,7 @@
                             <child>
                               <object class="GtkEntry" id="usdaSearchEntry">
                                 <property name="visible">True</property>
-                                <signal handler="iSearch" name="changed"/>
+                                <signal handler="iSearchCB" name="changed"/>
                                 <property name="can_default">True</property>
                                 <property name="has_default">True</property>
                                 <property name="editable">True</property>
@@ -341,7 +341,7 @@
                             <child>
                               <object class="GtkCheckButton" id="usdaSearchAsYouTypeToggle">
                                 <property name="visible">True</property>
-                                <signal handler="search_as_you_type_toggle" name="toggled"/>
+                                <signal handler="search_as_you_type_toggleCB" name="toggled"/>
                                 <property context="yes" name="label" translatable="yes">Search as you t_ype</property>
                                 <property name="use_underline">True</property>
                                 <property name="relief">GTK_RELIEF_NORMAL</property>
@@ -399,7 +399,7 @@
                                 <property name="visible">True</property>
                                 <property name="add_tearoffs">False</property>
                                 <property name="focus_on_click">True</property>
-                                <signal handler="filter_changed" name="changed"/>
+                                <signal handler="filter_changed_cb" name="changed"/>
                                 <signal handler="on_foodGroupComboBox_changed" last_modification_time="Sun, 15 Jan 2006 23:57:17 GMT" name="changed"/>
                               </object>
                               <packing>
