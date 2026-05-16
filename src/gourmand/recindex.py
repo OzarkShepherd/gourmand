@@ -197,7 +197,7 @@ class RecIndex:
         # List of entries in the `recipe` database table
         self.rvw = self.rd.search_recipes(self.searches, sort_by=self.sort_by)  # List["RowProxy"]
 
-    def search_entry_activate_cb(self, *args):
+    def search_entry_activate(self, *args):
         if self.rmodel._get_length_() == 1:
             self.rec_tree_select_rec()
         elif self.srchentry.get_text():
