@@ -58,10 +58,10 @@ class NutritionInfoIndex:
         self.set_limit(ingredients, in_string)
         self.ui.connect_signals(
             {
-                "iSearch": self.isearchCB,
-                "search": self.searchCB,
-                "search_as_you_type_toggle": self.search_as_you_typeCB,
-                "filter_changed": self.filter_changed_cb,
+                "iSearch": self.isearch,
+                "search": self.search,
+                "search_as_you_type_toggle": self.search_as_you_type_toggle,
+                "filter_changed": self.filter_changed,
             }
         )
         self.makeTreeModel()
