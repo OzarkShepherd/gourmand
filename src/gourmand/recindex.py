@@ -606,7 +606,7 @@ class RecIndex:
         else:
             return []
 
-    def selection_changedCB(self, *args):
+    def selection_changed(self, *args):
         """We pass along true or false to selection_changed
         to say whether there is a selection or not."""
         debug("selection_changed (self, *args):", 5)
