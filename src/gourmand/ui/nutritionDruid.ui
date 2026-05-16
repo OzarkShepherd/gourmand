@@ -321,7 +321,7 @@
                             <child>
                               <object class="GtkEntry" id="usdaSearchEntry">
                                 <property name="visible">True</property>
-                                <signal handler="iSearch" name="changed"/>
+                                <signal handler="search_as_you_type" name="changed"/>
                                 <property name="can_default">True</property>
                                 <property name="has_default">True</property>
                                 <property name="editable">True</property>
@@ -1994,9 +1994,9 @@
                                 <property name="has_frame">True</property>
                                 <property name="invisible_char">*</property>
                                 <property name="activates_default">False</property>
-                                <signal handler="iSearch" last_modification_time="Mon, 20 Sep 2004 10:21:57 GMT" name="editing_done"/>
-                                <signal handler="iSearch" last_modification_time="Mon, 20 Sep 2004 10:22:03 GMT" name="button_press_event"/>
-                                <signal handler="iSearch" last_modification_time="Mon, 20 Sep 2004 10:21:52 GMT" name="changed"/>
+                                <signal handler="search_as_you_type" last_modification_time="Mon, 20 Sep 2004 10:21:57 GMT" name="editing_done"/>
+                                <signal handler="search_as_you_type" last_modification_time="Mon, 20 Sep 2004 10:22:03 GMT" name="button_press_event"/>
+                                <signal handler="search_as_you_type" last_modification_time="Mon, 20 Sep 2004 10:21:52 GMT" name="changed"/>
                               </object>
                             </child>
                           </object>
@@ -2166,7 +2166,7 @@
                                     <property name="active">True</property>
                                     <property name="inconsistent">False</property>
                                     <property name="draw_indicator">True</property>
-                                    <signal handler="iSearch" last_modification_time="Sun, 29 Jan 2006 18:33:48 GMT" name="toggled"/>
+                                    <signal handler="search_as_you_type" last_modification_time="Sun, 29 Jan 2006 18:33:48 GMT" name="toggled"/>
                                   </object>
                                 </child>
                               </object>
