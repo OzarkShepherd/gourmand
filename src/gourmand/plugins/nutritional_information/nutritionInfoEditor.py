@@ -60,7 +60,7 @@ class NutritionInfoIndex:
             {
                 "iSearch": self.isearch,
                 "search": self.search,
-                "search_as_you_type_toggle": self.search_as_you_type_toggle,
+                "search_as_you_type_toggle": self.search_as_you_type,
                 "filter_changed": self.filter_changed,
             }
         )
