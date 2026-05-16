@@ -80,7 +80,7 @@ class NutritionInfoIndex:
         cb.set_model_from_list(self.nutritionFilterComboBox, [self.in_string, _("entire database")])
         cb.cb_set_active_text(self.nutritionFilterComboBox, self.in_string)
 
-    def filter_changed_cb(self, *args):
+    def filter_changed(self, *args):
         if self.nutritionFilterComboBox.get_active() == 0:
             self.treeModel.search_kwargs = self.treeModel.limited_args
         else:
