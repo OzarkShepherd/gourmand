@@ -142,7 +142,7 @@
                                 <property name="tooltip-text" translatable="yes">Search for recipes as you type</property>
                                 <property name="invisible_char">*</property>
                                 <signal handler="rlistSearch" name="changed"/>
-                                <signal handler="searchBoxActivatedCB" name="activate"/>
+                                <signal handler="searchBoxActivated" name="activate"/>
                                 <signal handler="rlistSearch" name="insert_at_cursor"/>
                               </object>
                               <packing>
