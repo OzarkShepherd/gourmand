@@ -51,9 +51,9 @@ class ShopEditor:
         # self.treeview.set_model(self.treeModel)
         self.ui.connect_signals(
             {
-                "iSearch": self.isearchCB,
-                "search": self.searchCB,
-                "search_as_you_type_toggle": self.search_as_you_typeCB,
+                "search_as_you_type": self.search_as_you_type,
+                "search": self.search,
+                "search_as_you_type_toggle": self.search_as_you_type_toggle,
                 "close_window": lambda *args: self.window.hide() and self.window.destroy(),
                 "catUp": self.catUpCB,
                 "catDown": self.catDownCB,
@@ -241,14 +241,15 @@ class ShopEditor:
             self.search_by = self.CAT_COL
         self.filteredModel.refilter()
 
-    def isearchCB(self, *args):
+    def search_as_you_type(self, *args):
         if self.searchAsYouTypeToggle.get_active():
             self.doSearch()
 
-    def searchCB(self, *args):
+    def search(self, *args):
+        """Main search button handler."""
         self.doSearch()
 
-    def search_as_you_typeCB(self, *args):
+    def search_as_you_type_toggle(self, *args):
         if self.searchAsYouTypeToggle.get_active():
             self.searchButton.hide()
         else:
