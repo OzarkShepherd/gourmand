@@ -114,7 +114,7 @@ class NutritionUSDAIndex:
         # inactive
         self.toggle_saut()
         # search
-        self.usdaSearchEntry.connect("changed", self.search_type_cb)
+        self.usdaSearchEntry.connect("changed", self.search_type)
         self.usdaFindButton.connect("clicked", self.search)
         self.usdaSearchAsYouTypeToggle.connect("toggled", self.toggle_saut)
         cb.set_model_from_list(self.foodGroupComboBox, [self.ALL_GROUPS] + self.rd.get_unique_values("foodgroup", self.rd.nutrition_table))
