@@ -173,9 +173,9 @@
                                     <property name="has_frame">True</property>
                                     <property name="invisible_char" translatable="yes">*</property>
                                     <property name="activates_default">False</property>
-                                    <signal handler="iSearch" last_modification_time="Mon, 20 Sep 2004 10:21:57 GMT" name="editing_done"/>
-                                    <signal handler="iSearch" last_modification_time="Mon, 20 Sep 2004 10:22:03 GMT" name="button_press_event"/>
-                                    <signal handler="iSearch" last_modification_time="Mon, 20 Sep 2004 10:21:52 GMT" name="changed"/>
+                                    <signal handler="search_as_you_type" name="editing_done"/>
+                                    <signal handler="search_as_you_type" name="button_press_event"/>
+                                    <signal handler="search_as_you_type" name="changed"/>
                                   </object>
                                 </child>
                               </object>
