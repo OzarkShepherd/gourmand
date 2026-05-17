@@ -61,7 +61,7 @@ class NutritionInfoIndex:
                 "search_as_you_type": self.search_as_you_type,
                 "search": self.search,
                 "search_as_you_type_toggle": self.search_as_you_type_toggle,
-                "filter_changed": self.filter_changed_cb,
+                "filter_changed": self.filter_changed,
             }
         )
         self.makeTreeModel()
