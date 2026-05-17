@@ -58,10 +58,10 @@ class NutritionInfoIndex:
         self.set_limit(ingredients, in_string)
         self.ui.connect_signals(
             {
-                "iSearch": self.isearch,
+                "search_as_you_type": self.search_as_you_type,
                 "search": self.search,
-                "search_as_you_type_toggle": self.search_as_you_type,
-                "filter_changed": self.filter_changed,
+                "search_as_you_type_toggle": self.search_as_you_type_toggle,
+                "filter_changed": self.filter_changed_cb,
             }
         )
         self.makeTreeModel()
@@ -149,14 +149,17 @@ class NutritionInfoIndex:
             },
         )
 
-    def isearch(self, *args):
+    def search_as_you_type(self, *args):
+        """Search-as-you-type handler."""
         if self.searchAsYouTypeToggle.get_active():
             self.doSearch()
 
     def search(self, *args):
+        """Main search button handler."""
         self.doSearch()
 
-    def search_as_you_type(self, *args):
+    def search_as_you_type_toggle(self, *args):
+        """Toggle visibility of the Search button when 'Search as you type' is enabled."""
         if self.searchAsYouTypeToggle.get_active():
             self.searchButton.hide()
         else:
