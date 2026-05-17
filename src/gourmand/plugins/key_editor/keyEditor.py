@@ -79,9 +79,9 @@ class KeyEditor:
         # self.treeview.set_model(self.treeModel)
         self.ui.connect_signals(
             {
-                "iSearch": self.isearchCB,
-                "search": self.searchCB,
-                "search_as_you_type_toggle": self.search_as_you_typeCB,
+                "search_as_you_type": self.search_as_you_type,
+                "search": self.search,
+                "search_as_you_type_toggle": self.search_as_you_type_toggle,
                 "applyEntries": self.applyEntriesCB,
                 "clearEntries": self.clearEntriesCB,
                 "close_window": lambda *args: self.window.hide(),
@@ -273,15 +273,15 @@ class KeyEditor:
 
         self.treeModel.limit(self.search_string, column, search_options={"use_regexp": self.use_regexp})
 
-    def isearchCB(self, *args):
+    def search_as_you_type(self, *args):
         if self.searchAsYouTypeToggle.get_active():
             self.window.get_window().set_cursor(Gdk.Cursor.new(Gdk.CursorType.WATCH))
             GObject.idle_add(lambda *args: (self.do_search() or self.window.get_window().set_cursor(None)))
 
-    def searchCB(self, *args):
+    def search(self, *args):
         self.do_search()
 
-    def search_as_you_typeCB(self, *args):
+    def search_as_you_type_toggle(self, *args):
         if self.searchAsYouTypeToggle.get_active():
             self.searchButton.hide()
         else:
