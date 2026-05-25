@@ -27,15 +27,15 @@ build-options:
   env:
     PIP_PREFIX: /app
 # these cleanup commands make the flatpak smaller for users to download from Flathub.
-cleanup:
-  - '*.a'
-  - '*.la'
-  - /include
-  - /lib/pkgconfig
-  - /share/aclocal
-  - /lib/cmake
-  - /share/gir-1.0
-  - /share/man
+# cleanup:
+#  - '*.a'
+#  - '*.la'
+#  - /include
+#  - /lib/pkgconfig
+#  - /share/aclocal
+#  - /lib/cmake
+#  - /share/gir-1.0
+#  - /share/man
 
 modules:
   - name: poppler
